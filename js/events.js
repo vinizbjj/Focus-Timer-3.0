@@ -7,11 +7,8 @@ import {
     buttonSoundRain,
     buttonSoundCoffe,
     buttonSoundFire,
-    treeVolume,
-    cloudVolume,
-    fireVolume,
-    coffeeVolume
 } from "./elements.js"
+import sounds from "./sounds.js"
 
 export default function events({ controls, timer, sound }) {
 
@@ -34,7 +31,7 @@ export default function events({ controls, timer, sound }) {
     })
 
     buttonSoundForest.addEventListener('click', function () {
-        sound.pressForestButton()
+        sound.pressSound(sound.forest)
         controls.forestButton()
         controls.rainButtonDefault()
         controls.coffeButtonDefault()
@@ -42,7 +39,7 @@ export default function events({ controls, timer, sound }) {
     })
 
     buttonSoundRain.addEventListener('click', function () {
-        sound.pressSoundRain()
+        sound.pressSound(sound.rain)
         controls.rainButton()
         controls.forestButtonDefault()
         controls.coffeButtonDefault()
@@ -51,7 +48,7 @@ export default function events({ controls, timer, sound }) {
     })
 
     buttonSoundCoffe.addEventListener('click', function () {
-        sound.pressSoundCoffe()
+        sound.pressSound(sound.coffee)
         controls.coffeButton()
         controls.forestButtonDefault()
         controls.rainButtonDefault()
@@ -59,11 +56,17 @@ export default function events({ controls, timer, sound }) {
     })
 
     buttonSoundFire.addEventListener('click', function () {
-        sound.pressSoundFire()
+        sound.pressSound(sound.fire)
         controls.fireButton()
         controls.forestButtonDefault()
         controls.rainButtonDefault()
         controls.coffeButtonDefault()
+    })
+
+
+    let sliderFire = document.querySelector(".pseudo");
+    sliderFire.addEventListener("change", function (e) {
+            sound.buttonSoundFire.volume = e.currentTarget.value / 100;
     })
 
 }

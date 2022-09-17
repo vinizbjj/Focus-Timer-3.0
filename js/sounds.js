@@ -1,60 +1,35 @@
 export default function () {
-    const buttonSoundForest = new Audio("./sounds/Floresta.wav")
-    const buttonSoundRain = new Audio("./sounds/Chuva.wav")
-    const buttonSoundCoffe = new Audio("./sounds/Cafeteria.wav")
-    const buttonSoundFire = new Audio("./sounds/Lareira.wav")
+    const forest = new Audio("./sounds/Floresta.wav")
+    const rain = new Audio("./sounds/Chuva.wav")
+    const coffee = new Audio("./sounds/Cafeteria.wav")
+    const fire = new Audio("./sounds/Lareira.wav")
 
+    forest.loop
 
+    fire.volume = 0.5
 
-
-    buttonSoundForest.loop
-
-    function pressForestButton() {
-        buttonSoundForest.play()
-        buttonSoundRain.pause()
-        buttonSoundCoffe.pause()
-        buttonSoundFire.pause()
-
-
+    function pressSound(sound) {
+        pauseAllSounds()
+        sound.play()
     }
 
-    function pressSoundRain() {
-        buttonSoundRain.play()
-        buttonSoundForest.pause()
-        buttonSoundCoffe.pause()
-        buttonSoundFire.pause()
-    }
-
-    function pressSoundCoffe() {
-        buttonSoundCoffe.play()
-        buttonSoundForest.pause()
-        buttonSoundRain.pause()
-        buttonSoundFire.pause()
-    }
-
-
-    function pressSoundFire() {
-        buttonSoundFire.play()
-        buttonSoundForest.pause()
-        buttonSoundRain.pause()
-        buttonSoundCoffe.pause()
-    }
 
     function pauseAllSounds() {
-        buttonSoundForest.pause()
-        buttonSoundRain.pause()
-        buttonSoundCoffe.pause()
-        buttonSoundFire.pause()
+        forest.pause()
+        rain.pause()
+        coffee.pause()
+        fire.pause()
     }
-
 
 
     return {
-        pressForestButton,
-        pressSoundRain,
-        pressSoundCoffe,
-        pressSoundFire,
-        pauseAllSounds
+        pauseAllSounds,
+        forest,
+        rain,
+        coffee,
+        fire,
+        pressSound,
+
     }
 }
 
