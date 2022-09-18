@@ -4,7 +4,11 @@ export default function () {
     const coffee = new Audio("./sounds/Cafeteria.wav")
     const fire = new Audio("./sounds/Lareira.wav")
 
-    forest.loop
+    forest.loop = true
+    rain.loop = true
+    coffee.loop = true
+    fire.loop = true
+
 
     fire.volume = 0.5
 
@@ -13,14 +17,12 @@ export default function () {
         sound.play()
     }
 
-
     function pauseAllSounds() {
         forest.pause()
         rain.pause()
         coffee.pause()
         fire.pause()
     }
-
 
     return {
         pauseAllSounds,

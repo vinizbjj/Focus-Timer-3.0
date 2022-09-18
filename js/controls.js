@@ -13,6 +13,7 @@ export default function () {
     function coffeButton() {
         document.getElementById('coffeBackground').style.fill = '#02799D'
         document.getElementById('coffeIcon').style.fill = 'white'
+        
     }
 
     function fireButton() {
@@ -41,7 +42,6 @@ export default function () {
         document.getElementById('fireIcon').style.fill = '#323238'
     }
 
-
     return {
         forestButton,
         rainButton,
@@ -50,7 +50,7 @@ export default function () {
         forestButtonDefault,
         rainButtonDefault,
         coffeButtonDefault,
-        fireButtonDefault
+        fireButtonDefault,
     }
 }
 

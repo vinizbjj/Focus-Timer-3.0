@@ -7,8 +7,12 @@ import {
     buttonSoundRain,
     buttonSoundCoffe,
     buttonSoundFire,
+    sliderForest,
+    sliderRain,
+    sliderCoffee,
+    sliderFire,
 } from "./elements.js"
-import sounds from "./sounds.js"
+
 
 export default function events({ controls, timer, sound }) {
 
@@ -63,10 +67,23 @@ export default function events({ controls, timer, sound }) {
         controls.coffeButtonDefault()
     })
 
-
-    let sliderFire = document.querySelector(".pseudo");
-    sliderFire.addEventListener("change", function (e) {
-            sound.buttonSoundFire.volume = e.currentTarget.value / 100;
+    sliderForest.addEventListener("change", function (e) {
+        sound.forest.volume = e.currentTarget.value / 100;
     })
+
+    sliderRain.addEventListener("change", function (e) {
+        sound.rain.volume = e.currentTarget.value / 100;
+    })
+
+    sliderCoffee.addEventListener("change", function (e) {
+        sound.coffee.volume = e.currentTarget.value / 100;
+    })
+
+    sliderFire.addEventListener("change", function (e) {
+        sound.fire.volume = e.currentTarget.value / 100;
+    })
+
+
+
 
 }

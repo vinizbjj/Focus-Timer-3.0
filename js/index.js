@@ -5,14 +5,17 @@ import Events from "./events.js"
 import { minutesDisplay, secondsDisplay } from "./elements.js"
 
 
+
 const timer = Timer({
     minutesDisplay,
     secondsDisplay,
 })
 
-
 const sound = Sound()
 
 const controls = Controls()
 Events({ sound, timer, controls })
+
+
+
 
