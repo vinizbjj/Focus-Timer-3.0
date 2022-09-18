@@ -21,6 +21,12 @@ const cloudVolume = cloudCard.querySelector('input')
 const fireVolume = fireCard.querySelector('input')
 const coffeeVolume = coffeeCard.querySelector('input')
 
+const sliderForest = document.querySelector(".volForest");
+const sliderRain = document.querySelector(".volRain");
+const sliderCoffee = document.querySelector(".volCoffee");
+const sliderFire = document.querySelector(".volFire");
+
+
 
 
 
@@ -39,5 +45,9 @@ export {
     cloudVolume,
     fireVolume,
     coffeeVolume,
+    sliderForest,
+    sliderRain,
+    sliderCoffee,
+    sliderFire,
 
 }

@@ -1,13 +1,10 @@
 export default function Timer({
     minutesDisplay,
     secondsDisplay,
-
-
 }) {
 
     let minutes = 60
     let seconds
-
 
     function countdown() {
         minutes = setTimeout(function () {
@@ -38,7 +35,7 @@ export default function Timer({
 
     function stop() {
         clearTimeout(minutes)
-        minutes = "00"
+        minutes = "60"
         seconds = "00"
         minutesDisplay.textContent = minutes
         secondsDisplay.textContent = seconds
@@ -66,7 +63,7 @@ export default function Timer({
 
         } else {
             clearTimeout(minutes)
-            minutes = "00"
+            minutes = "60"
             seconds = "00"
             minutesDisplay.textContent = minutes
             secondsDisplay.textContent = seconds
