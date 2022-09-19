@@ -6,7 +6,11 @@
 
 :root {
     font-size: 62.5%;
-    --tm-color: #323238 --bg-color: #FFFFFF;
+    --bg-color: #FFFFFF;
+    --tm-color: #323238;
+    --ip-color: #323238;
+
+
 
 }
 
@@ -79,7 +83,7 @@ aside {
     right: 1.6rem;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
@@ -89,7 +93,7 @@ input[type="range"] {
     margin-right: 2rem;
     width: 9rem;
     height: 0.4rem;
-    background: #323238;
+    background: var(--ip-color);
     border-radius: 5px;
 
     position: relative;
@@ -101,13 +105,10 @@ input::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 1.4rem;
     height: 1.4rem;
-    border-radius: 50%;    
-    background: black;
+    border-radius: 50%;
+    background: var(--ip-color);
 }
 
 
 
 /* darkmode */
-
-
-
